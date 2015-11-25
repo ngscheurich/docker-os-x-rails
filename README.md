@@ -1,4 +1,4 @@
-# Setup notes for Docker + Ruby on Rails on OS X
+# Setup notes for Docker +  Rails on OS X
 
 ## Prerequisites
 
