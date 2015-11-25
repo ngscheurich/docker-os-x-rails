@@ -179,7 +179,8 @@ IP address. If your Docker VM is called *default*, you can find its IP by runnin
 $ docker-machine ip default
 ```
 
-> It’s probably a good idea to alias the Docker VM’s ip to something like *docker* in your hosts file
+> It’s probably a good idea to alias the Docker VM’s IP to something like *docker* in your hosts
+file so you can just hit up http://docker:3000.
 
 *Voilà!*
 
