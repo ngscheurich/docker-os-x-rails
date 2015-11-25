@@ -157,7 +157,7 @@ the database:
 $ docker-compose run web rake db:create db:setup
 ```
 
-> `rake db:create db:setup` from the above command is what is sent to the web
+> `rake db:create db:setup` from the above command is what is sent to the *web*
 container to process. Any command will work here—for instance, we could
 `docker-compose run web bash` to get an interactive shell.
 
@@ -178,6 +178,8 @@ IP address. If your Docker VM is called *default*, you can find its IP by runnin
 ```shell
 $ docker-machine ip default
 ```
+
+> It’s probably a good idea to alias the Docker VM’s ip to something like *docker* in your hosts file
 
 *Voilà!*
 
