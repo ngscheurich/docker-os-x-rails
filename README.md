@@ -89,7 +89,7 @@ $ docker build -t username/rails:latest .
 name, and `latest` is your image’s author. You can change these to whatever you
 like, or just omit the `-t` option.
 
-If all went well, running `docker image` should show your newly created image
+If all went well, running `docker images` should show your newly created image
 (as well as the `ruby` and `hello-world` images, if you’ve been following along).
 
 ### Define services
