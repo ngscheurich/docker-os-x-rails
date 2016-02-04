@@ -71,11 +71,11 @@ RUN mkdir $APP_DIR
 WORKDIR $APP_DIR
 
 # Install gems in the image
-ADD Gemfile* $APP_HOME/
+ADD Gemfile* $APP_DIR/
 RUN bundle install
 
 # Copy app files to image
-ADD . $APP_HOME
+ADD . $APP_DIR
 ```
 
 Now, build the Docker image you defined by running the following command from
