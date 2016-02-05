@@ -116,7 +116,8 @@ db:
   # Expose default PostgreSQL port to the host
   ports:
     - "5432:5432"
-# Define a service for the app
+
+# Define a service for the Rails app
 web:
   # Specify path to the app’s Dockerfile
   build: .
