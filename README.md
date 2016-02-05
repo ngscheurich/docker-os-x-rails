@@ -60,13 +60,22 @@ This will define a new Docker image for your app:
 FROM ruby:2.2.3
 
 # Update Apt sources and install build tools
-RUN apt-get update -qq && apt-get install -y build-essential libpq-dev
+RUN apt-get update -qq && apt-get install -y build-essential
+
+# Install dependencies for PostgreSQL
+RUN apt-get install -y libpq-dev
+
+# Install dependencies for Nokogiri
+RUN apt-get install -y libxml2-dev libxslt1-dev
+
+# # Install dependencies for capybara-webkit
+RUN apt-get install -y libqt4-webkit libqt4-dev xvfb
 
 # Install a JavaScript runtime
 RUN apt-get install -y nodejs
 
 # Create a place for the Rails app to live and then change to it
-ENV APP_DIR /web
+ENV APP_DIR /railsapp
 RUN mkdir $APP_DIR
 WORKDIR $APP_DIR
 
@@ -121,7 +130,7 @@ web:
     - db
   # Mount the app directory on our host to the web service container
   volumes:
-    - .:/web
+    - .:/railsapp
 ```
 
 Now, edit your Rails database config to reference the *db* service.
