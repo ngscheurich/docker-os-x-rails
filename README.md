@@ -159,7 +159,7 @@ $ docker-compose run web rake db:create db:setup
 
 > `rake db:create db:setup` from the above command is what is sent to the *web*
 container to process. Any command will work here—for instance, we could
-`docker-compose run web bash` to get an interactive shell.
+`docker-compose run web /bin/bash` to get an interactive shell.
 
 ### Run the app
 
