@@ -68,7 +68,7 @@ RUN apt-get install -y libpq-dev
 # Install dependencies for Nokogiri
 RUN apt-get install -y libxml2-dev libxslt1-dev
 
-# # Install dependencies for capybara-webkit
+# Install dependencies for capybara-webkit
 RUN apt-get install -y libqt4-webkit libqt4-dev xvfb
 
 # Install a JavaScript runtime
