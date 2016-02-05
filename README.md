@@ -66,7 +66,7 @@ RUN apt-get update -qq && apt-get install -y build-essential libpq-dev
 RUN apt-get install -y nodejs
 
 # Create a place for the Rails app to live and then change to it
-ENV APP_DIR /app
+ENV APP_DIR /web
 RUN mkdir $APP_DIR
 WORKDIR $APP_DIR
 
@@ -119,9 +119,9 @@ web:
   # Link to the container in the db service
   links:
     - db
-  # Mount the app path on our host to the web service container
+  # Mount the app directory on our host to the web service container
   volumes:
-    - .:/app
+    - .:/web
 ```
 
 Now, edit your Rails database config to reference the *db* service.
